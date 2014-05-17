@@ -1,6 +1,8 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
+using FactsLibrary.Core;
+using FactsLibrary.Repository;
 
 namespace FactsLibrary.Api.App_Start
 {
@@ -37,6 +39,8 @@ namespace FactsLibrary.Api.App_Start
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterType<ICountryFactsRepository, CountryFactsRepository>();
+
         }
     }
 }

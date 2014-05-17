@@ -18,6 +18,7 @@ namespace WebSite
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            WebSite.App_Start.UnityConfig.RegisterTypes(WebSite.App_Start.UnityConfig.GetConfiguredContainer());
         }
     }
 }

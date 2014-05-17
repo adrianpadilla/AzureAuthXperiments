@@ -1,17 +1,15 @@
-﻿using System;
+﻿using FactsLibrary.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Web.Http.OData;
-using WebSite.Models;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace WebSite.Controllers
+namespace FactsLibrary.Repository
 {
-    public class CountryFactsController : EntitySetController<CountryFact,string>
+    public class CountryFactsRepository : ICountryFactsRepository
     {
-        public override IQueryable<CountryFact> Get()
+        public IQueryable<CountryFact> GetCountryFacts()
         {
             var mockList = new List<CountryFact>();
             mockList.Add(new CountryFact() { CountryName = "United States", Population = 317996000 });

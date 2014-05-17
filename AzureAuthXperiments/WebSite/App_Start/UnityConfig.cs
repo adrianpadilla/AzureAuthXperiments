@@ -37,6 +37,7 @@ namespace WebSite.App_Start
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
+            
         }
     }
 }

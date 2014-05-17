@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WebSite.Models
+namespace FactsLibrary.Core
 {
     public class CountryFact
     {
