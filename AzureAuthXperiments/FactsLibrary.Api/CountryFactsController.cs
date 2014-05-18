@@ -8,7 +8,7 @@ using System.Web.Http.OData;
 
 namespace FactsLibrary.Api
 {
-    public class CountryFactsController: EntitySetController<string,CountryFact>
+    public class CountryFactsController: EntitySetController<CountryFact,string>
     {
 
 
@@ -17,5 +17,16 @@ namespace FactsLibrary.Api
         {
             this.Repository = repository;
         }
+
+        public CountryFactsController()
+        {
+            this.Repository = null;
+        }
+
+        public override IQueryable<CountryFact> Get()
+        {
+            return (new[] { new CountryFact() { CountryName = "Mexico", Population = 1020 } }).AsQueryable();
+        }
+
     }
 }
