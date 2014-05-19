@@ -20,7 +20,7 @@ namespace FactsLibrary.Api
 
         public CountryFactsController()
         {
-            this.Repository = null;
+
         }
 
         public override IQueryable<CountryFact> Get()

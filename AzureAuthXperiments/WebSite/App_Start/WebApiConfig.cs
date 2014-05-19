@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.OData.Builder;
+using System.Web.Mvc;
 
 namespace WebSite
 {
@@ -27,7 +28,6 @@ namespace WebSite
 
             Microsoft.Data.Edm.IEdmModel model = modelBuilder.GetEdmModel();
             config.Routes.MapODataRoute("ODataRoute", "odata", model);
-
         }
     }
 }
