@@ -11,18 +11,6 @@ namespace FactsLibrary.Api
     public class CountryFactsController: EntitySetController<CountryFact,string>
     {
 
-
-        public ICountryFactsRepository Repository { get; private set; }
-        public CountryFactsController(ICountryFactsRepository repository)
-        {
-            this.Repository = repository;
-        }
-
-        public CountryFactsController()
-        {
-
-        }
-
         public override IQueryable<CountryFact> Get()
         {
             return (new[] { new CountryFact() { CountryName = "Mexico", Population = 1020 } }).AsQueryable();
